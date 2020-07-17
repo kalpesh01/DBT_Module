@@ -1,0 +1,11 @@
+Q1.select * from supplier order by CITY;
+
+Q2.select * from supplier order by city , Part_Name;
+
+Q3.select * from supplier where status between 10 and 20;
+
+Q4.select part from suppiler where part like 'S%';
+
+Q6. select * from suppiler where cities like 'L%';
+
+Q7.select * from project where JNAME like '__n%';

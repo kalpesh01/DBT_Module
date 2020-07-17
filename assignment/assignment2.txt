@@ -1,0 +1,13 @@
+1).Which field of the Customers table is the primary key?
+ANS:-   Cnum(customerNumber) is primary key of customers table
+
+2).What is the 4th column of the Customers table?
+ANS:- 4Th column in customers table is Rating.
+
+3) What is another word for row? For column?
+ANS:-  Another word for row is Tuple,entity,opportunity.
+       Another word for Column->Attribute,Methods
+
+4) Why isn’t it possible to see the first five rows of a table?
+ANS:- SQL stores the rows in scattered manner.if we manually gives the index to rows 
+      then we can get the top first five rows.	
