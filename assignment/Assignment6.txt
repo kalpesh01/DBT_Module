@@ -1,0 +1,16 @@
+Q1.select * from orders where odate="1990-10-03" or odate="1990-10-04";
+   select * from orders where odate in("1990-10-03","1990-10-04");
+
+
+Q2.SELECT * FROM customers WHERE snum IN (SELECT snum FROM salespeople WHERE sname='Peel' OR sname='Motika');
+
+ 
+Q3.
+   select * from customers where cname between 'A%' and 'H%';
+
+Q4.
+   select * from customers where cname like 'C%';
+
+Q5.
+   select * from orders where amt not in (0,'NULL');
+
