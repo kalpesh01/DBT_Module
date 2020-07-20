@@ -1,0 +1,23 @@
+Q1.
+  select upper(substr(sname,1,1)) from supplier;
+
+Q2.
+  select upper(sname) from supplier;
+
+Q3
+  select lower(sname) from supplier;
+
+Q4.
+  select lpad(sname,25,' ') from supplier;
+  
+Q5.
+  select replace(sname,'la','ro') from supplier;
+  
+Q6.
+  select replace(replace(sname,'l','r'),'a','0') from supplier;
+
+Q7 
+  select length(sname) from supplier;
+
+Q8.
+  select * from supllier where soundex(name)=soundex('BLOKE');
