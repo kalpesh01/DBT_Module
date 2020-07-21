@@ -1,0 +1,14 @@
+Name: kalpesh R Patil                                 SID: 200240520041
+Assignment 7
+Q1
+- select count(*) from orders where odate='1990-10-03';
+Q2. 
+- select count(distinct(city)) from customers where city is not null;
+Q3.
+  SELECT min(amt) FROM ORDERS GROUP BY CNUM;
+Q4.
+- SELECT cname FROM CUSTOMERS WHERE cname LIKE 'G%' ORDER BY cname LIMIT 1;
+Q5.
+- SELECT city, MAX(rating) as "MAX RATING" FROM customers GROUP BY city;
+Q6.
+- SELECT count(distinct(odate)), odate FROM orders GROUP BY odate;
