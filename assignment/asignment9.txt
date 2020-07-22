@@ -1,0 +1,34 @@
+
+ 
+                                                        Assignment - 9
+            
+Name - Kalpesh R Patil
+SID - 200240520041
+
+
+Q1) Write a query that lists each order number followed by the name of the customer
+who made the order
+
+ANS: select onum,cname from customers,orders where orders.Snum=customers.Snum group by onum;
+
+Q2)Write a query that gives the names of both the salesperson and the customer for
+each order along with the order number.
+
+ANS:-SELECT o.onum, s.sname, c.cname
+FROM orders o, customers c, salespeople s
+WHERE o.cnum=c.cnum AND o.snum=s.snum;
+
+
+Q3) Write a query that produces all customers serviced by salespeople with a
+commission above 12%. Output the customer’s name, the salesperson’s name,
+and the salesperson’s rate of commission.
+
+ANS:-  select c.cname,s.sname,s.comm from customers c,salespeople s where s.Snum=c.Snum and s.comm > .12;  
+
+Q4) Write a query that calculates the amount of the salesperson’s commission on each
+order by a customer with a rating above 100.
+
+ANS: select o.onum,c.cname,o.amt*s.comm as commision,c.rating 
+     from customers c,salespeople s,orders o 
+     where o.Snum=s.Snum and
+     o.Snum=c.Snum  and c.Rating>100;
