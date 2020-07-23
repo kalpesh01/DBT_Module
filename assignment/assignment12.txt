@@ -1,0 +1,26 @@
+ 
+ 
+                                                        Assignment - 12
+            
+Name - Kalpesh R Patil
+SID - 200240520041
+
+Q1) Write a query that selects all customers whose ratings are equal to or greater than ANY of Serres’. 
+ans:
+	select cname,rating from customers where
+	rating >= any (select rating from customers where 
+	snum in (select snum from salesperson where sname = 'serres'))
+
+Q2) Write a query using ANY or ALL that will find all salespeople who have no customers located in their city. 
+ans:
+	select cname,city from customers where city != all(select city from salesperson)
+
+Q3) Write a query that selects all orders for amounts greater than any for the customers in London. 
+ans:
+	select * from orders where 
+	amt > any(select amt from orders where 
+	cnum = any(select cnum from Customers where city = 'london'))
+
+Q4) Write the above query using MIN or MAX. 
+ans]
+	select * from orders where amt > any(select min(amt) from orders where cnum = any(select cnum from Customers where city = 'london'))
