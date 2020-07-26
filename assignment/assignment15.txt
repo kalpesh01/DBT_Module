@@ -1,0 +1,21 @@
+ 
+ 
+                                                        Assignment - 15
+            
+Name - Kalpesh R Patil
+SID - 200240520041
+
+Q1. Assume there is a table called Multicust, with all of the same column definitions as Salespeople.
+Write a command that inserts all salespeople with more than one customer into this table.
+Ans:	
+	insert into multicust select * from SalesPerson where
+	snum in (select snum from customers group by snum having count(snum) > 1 ) 
+
+Q2. Write a command that deletes all customers with no current orders.
+Ans:
+
+
+Q3. Write a command that increases by twenty percent the commissions of all salespeople with total orders above Rs. 3,000.
+Ans:
+	update salesperson set comm = comm + (0.2*comm) where 
+	snum in (select snum from orders group by snum having sum(amt) > 3000 )
